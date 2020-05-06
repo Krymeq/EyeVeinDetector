@@ -17,3 +17,6 @@ def change_resolution(img, factor):
     res = img[::factor, ::factor]
     return np.array(res)
 
+
+def threshold(img, threshpoint):
+    return np.array([[1 if x >= threshpoint else 0 for x in y] for y in img])
